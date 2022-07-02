@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            width: 100%;
+            flex-direction: column;
+            background-color:#091921;
+        }
+        body h2{
+            color: #eee;
+            margin-bottom: 40px;
+        }
+        .clock{
+            width: 350px;
+            height: 350px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-image: url("clock.png");
+            background-size: cover;
+            border:4px solid #091921;
+            box-shadow: 0 -15px 15px rgba(255,255,255,0.05),
+            inset  0 -15px 15px rgba(255,255,255,0.05),
+            0 -15px 15px rgba(0,0,0,0.03),
+            inset  0 -15px 15px rgba(0,0,0,0.02);
+            border-radius: 50%;
+        }
+        .clock::before{
+            content: "";
+            position: absolute;
+            width: 15px;
+            height: 15px;
+            border-radius: 50%;
+            z-index: 1000;
+            background: #fff;
+        }
+    .clock .hours,
+    .clock .minutes,
+    .clock .seconds{
+        position: absolute;
+        }
+    .clock .hours, .hor{
+    width: 180px;
+    height: 180px;
+    }
+    .clock .minutes, .min{
+    width:  180px;
+    height: 180px;
+    }
+    .clock .seconds, .sec{
+    width:  180px;
+    height: 180px;
+    }
+   .hor, .min, .sec{
+    display: flex;
+    justify-content: center;
+   
+    position: absolute;
+    border-radius: 50%;
+
+}
+.hor::before{
+content: "";
+position: absolute;
+width: 8px;
+height: 85px;
+background-color: #ff105e;
+z-index: 10;
+border-radius: 6px 6px 0 0;
+}
+.min::before{
+content: "";
+position: absolute;
+width: 4px;
+height: 100px;
+background-color: #3fb2ec;
+z-index: 11;
+border-radius: 6px 6px 0 0;
+}
+.sec::before{
+content: "";
+position: absolute;
+width: 2px;
+height: 120px;
+background-color: #eee;
+margin-bottom: 20px;
+z-index: 11;
+border-radius: 6px 6px 0 0;
+}
+    </style>
+</head>
+<body>
+    <h2>Zamanın qədrini bil,Sənin ən böyük hədiyyədindir</h2>
+<div class="clock">
+        <div class="hours">
+            <div class="hor" id="hour">
+        </div>
+        <div class="minutes">
+            <div class="min" id="minute">
+        </div>
+        <div class="seconds">
+            <div class="sec" id="second">
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
